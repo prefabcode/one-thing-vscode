@@ -1,0 +1,45 @@
+{
+  "name": "one-thing-vscode",
+  "displayName": "one-thing-vscode",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+      "commands": [
+        {
+            "command": "extension.editGoal",
+            "title": "Edit Focus Goal"
+        }
+      ],
+      "keybindings": [
+        {
+            "command": "extension.editGoal",
+            "key": "ctrl+alt+g",
+            "linux": "ctrl+alt+g",
+            "mac": "ctrl+alt+g",
+            "win": "ctrl+alt+g"
+        }
+      ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
