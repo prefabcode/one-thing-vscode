@@ -19,12 +19,6 @@ function activate(context) {
 
     context.subscriptions.push(disposable);
 
-    let tooltipDisposable = vscode.commands.registerCommand('extension.showFullGoal', () => {
-        vscode.window.showInformationMessage(fullText, { modal: false });
-    });
-
-    context.subscriptions.push(tooltipDisposable);
-
     fullText = context.globalState.get('goalText', defaultText);
     updateEditorTitle();
 
